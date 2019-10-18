@@ -1,3 +1,6 @@
+//Main Coding File - what will this do?
+  //This is the bulk of the coding that will contribute to this project. Within this file, the code applies the measured RGB individual wavelengths to certain arrays; the data is first balanced and afterwards printed to the serial monitor. Once the outputs are set up, a function is run to find the average light wavelengths of white and black, using semi-manual calibration from the user. By reading samples set in front of the sensor the code is able to balance out all future readings and create more accurate results. Every two seconds after the initial readings the serial monitor will report the individual RGB wavelengths of whatever colour is received by the photoresistor.
+
 #include "RGBalance.h";
 #include "colourDictionary.h";
 
