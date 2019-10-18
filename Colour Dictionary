@@ -1,3 +1,6 @@
+//To be Included in the Main Code (Colour&Maths)
+//This function finds what the stronger wavelength of light is by comparing values. Depending on the outcome, the function will return a string of characters corresponding to the correct colour.
+
 void colourDictionary (int val1, int val2, int val3){ //red, green and blue values respectively
 	String mainColour = String("");
 
