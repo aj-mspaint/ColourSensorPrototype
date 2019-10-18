@@ -1,0 +1,65 @@
+//To Be Included in Main Code (Colour&Maths)
+  //Use of this class allows the programmer to find the average RGB values of a light input.
+
+class RGBalance {
+  int avgRead = 0;
+  int LEDs[3];
+
+  void getReading(int times, int anlo){ 
+    int reading;
+    int tally = 0;
+    for(int i = 0; i < times; i++){
+      reading = analogRead(anlo);
+      tally = reading + tally;
+      delay(10); }
+      avgRead = (tally)/times;
+    }
+
+  public:
+  RGBalance(int pin1, int pin2, int pin3) {
+    LEDs[0] = pin1;
+    LEDs[1] = pin2;
+    LEDs[2] = pin3;
+  }
+	
+  void setup() {
+    for (int i = 0; i < 3; i++) {
+      pinMode(LEDs[i], OUTPUT);
+    }
+  }
+
+//C++ really does not want you to return an array from a function, therefore, this code will give the wavelength values individually to be applied to arrays in the bulk code.
+  float findR() {
+    float out; 
+    digitalWrite(LEDs[0], HIGH);
+    delay(100);
+    getReading(5, A5); //while the LED is on, the photodiode finds its average reading
+    out = avgRead;
+    digitalWrite(LEDs[0], LOW);
+    delay(100); 
+    return out;
+  }
+
+//and we repeat:
+  float findG() {
+    float out; 
+    digitalWrite(LEDs[1], HIGH);
+    delay(100);
+    getReading(5, A5);
+    out = avgRead;
+    digitalWrite(LEDs[1], LOW);
+    delay(100); 
+    return out;
+  }
+
+float findB() {
+    float out; 
+    digitalWrite(LEDs[2], HIGH);
+    delay(100);
+    getReading(5, A5);
+    out = avgRead;
+    digitalWrite(LEDs[2], LOW);
+    delay(100); 
+    return out;
+  }
+};
