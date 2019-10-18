@@ -11,4 +11,4 @@ You will need:
 - Breadboard
 - Arduino
 
-Once your board is set up and programmed, you will have a five second window from when the program begins to place a white sample in front of the LED and sensor. Once the LED finishes flashing, you will have another five seconds to place the black sample. Once this is done, the balance has been calculated, and after five seconds the program will begin to read colours. You will be able to read the data being read from the serial monitor. Place objects in front of the sensor to try it out!
+Once your board is built and programmed, you will have a five second window from when the program begins to place a white sample in front of the LED and sensor. Once the LED finishes flashing, you will have another five seconds to place the black sample. Once this is done, the balance has been calculated, and after five seconds the program will begin to read colours. You will be able to read the data being read from the serial monitor. Place objects in front of the sensor to try it out!
