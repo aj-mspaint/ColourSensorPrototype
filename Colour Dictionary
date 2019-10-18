@@ -1,0 +1,31 @@
+void colourDictionary (int val1, int val2, int val3){ //red, green and blue values respectively
+	String mainColour = String("");
+
+  if (val1 == 255 && val2 == 255 && val3 == 255) { //if maximum input is being recieved, the colour must be white.
+    mainColour = String("white");
+    Serial.println(mainColour);
+  }
+
+  else if (val1 + val2 + val3 == 0) { //if minimum input is being recieved, the colour must be black.
+    mainColour = String("black");
+    Serial.println(mainColour);
+  }
+  
+	//find the strongest wavelength by comparing values.
+  else if (val1 > val2 && val1 > val3) {
+    mainColour = String("red");
+    Serial.println(mainColour);
+  }
+  
+  else if (val2 > val1 && val2 > val3) {
+    mainColour = String("green");
+    Serial.println(mainColour);
+  }
+  
+  else if (val3 > val1 && val3 > val2) {
+    mainColour = String("blue");
+    Serial.println(mainColour);
+  }
+	
+	//to expand upon this list (add yellow, cyan, magenta etc.), a programmer must create a suitable allowance of difference between two values.
+}
