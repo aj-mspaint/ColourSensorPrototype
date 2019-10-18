@@ -1,16 +1,19 @@
-class RGBalance {
-	int avgRead = 0;
-	int LEDs[3];
+//To Be Included in Main Code (Colour&Maths)
+  //Use of this class allows the programmer to find the average RGB values of a light input.
 
-	void getReading(int times, int anlo){ 
-		int reading;
-  	int tally = 0;
-  	for(int i = 0; i < times; i++){
-    	reading = analogRead(anlo);
-    	tally = reading + tally;
-    	delay(10); }
-  	avgRead = (tally)/times;
-	}
+class RGBalance {
+  int avgRead = 0;
+  int LEDs[3];
+
+  void getReading(int times, int anlo){ 
+    int reading;
+    int tally = 0;
+    for(int i = 0; i < times; i++){
+      reading = analogRead(anlo);
+      tally = reading + tally;
+      delay(10); }
+      avgRead = (tally)/times;
+    }
 
   public:
   RGBalance(int pin1, int pin2, int pin3) {
